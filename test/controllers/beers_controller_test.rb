@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class InformationTest < ActiveSupport::TestCase
+class BeersControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
