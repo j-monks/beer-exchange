@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Fredoka One';
+  src: url("../../fonts/FredokaOne-Regular.ttf");
+}
+
+.homepage {
+    font-family: 'Fredoka One';
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 29px;
+  }
+
+  .beer { 
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+  }
+  
+  .step-box-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .step-box {
+    width: 75vw;
+    max-width: 720px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: rgba(200, 200, 200, 0.25);
+  }
