@@ -11,6 +11,7 @@
     margin-top: 25px;
     font-size: 29px;
   }
+  
 
   .beer { 
   /* Set rules to fill background */
@@ -45,4 +46,11 @@
     border: 1px solid black;
     border-radius: 15px;
     background-color: rgba(200, 200, 200, 0.25);
+  }
+
+  .beer-forum {
+    margin-top: 40px;
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   }
