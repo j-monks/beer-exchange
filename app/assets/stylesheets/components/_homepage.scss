@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Fredoka One';
+  src: url("../../fonts/FredokaOne-Regular.ttf");
+}
+
+.homepage {
+    font-family: 'Fredoka One';
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  .beer { 
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+  }
