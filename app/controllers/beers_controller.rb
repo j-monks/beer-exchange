@@ -9,8 +9,10 @@ class BeersController < ApplicationController
 
   def create
     @beer = Beer.new(beer_params)
+    @user = current_user
     @beer.user = current_user
     if @beer.save
+      UserMailer.welcome_email(@user).deliver_now
       redirect_to '/'
     else
       render :new
