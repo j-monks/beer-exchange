@@ -54,3 +54,36 @@
     color: white;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   }
+
+  .main-container{
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .contact-form{
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #c1c1c1;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #eaeaea;
+    margin-bottom: 50px; 
+    font-size: 20px;
+    color: black;
+    margin-top: 50px;
+ }
+
+ .submit-btn{
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  background-color: black;
+  border:none;
+}
+
+.submit-btn:hover {
+  color: #c1c1c1;
+  //you can add more styles to be applied on hover
+}
