@@ -7,8 +7,9 @@
     font-family: 'Fredoka One';
     color: white;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-    margin-left: 20px;
-    margin-top: 10px;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 29px;
   }
 
   .beer { 
@@ -26,4 +27,22 @@
   left: 0;
 
   z-index: -1;
+  }
+  
+  .step-box-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .step-box {
+    width: 75vw;
+    max-width: 720px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: rgba(200, 200, 200, 0.25);
   }
