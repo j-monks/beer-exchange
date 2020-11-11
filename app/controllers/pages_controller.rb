@@ -35,8 +35,9 @@ class PagesController < ApplicationController
       if user == last && potential_friends[num] == user
         matching_algorithm
       end
+      friends
     end
-    return friends
+    friends
   end
 
   # This algorithm only works for even numbers of users. Will set up two and two people with each other.
@@ -45,14 +46,15 @@ class PagesController < ApplicationController
     users = User.all
     friends = {}
     i = 0
-    while i < length / 2 do
+    while i < length / 2
       num = rand(1 .. users.length)
       friends[users[0]] = users[num]
       friends[users[num]] = users[0]
       users.slice!(0, num)
       i++
+      friends
     end
-    return friends
+    friends
   end
 
 end
