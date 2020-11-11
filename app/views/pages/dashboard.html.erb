@@ -1,0 +1,5 @@
+<% if @user.admin %>
+  <%= render 'sending' %>
+  <% else %>
+    <p> You are not supposed to see this page you cheeky bastard </p>
+<% end %>

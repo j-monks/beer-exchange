@@ -1,9 +1,17 @@
 <!-- TODO, add a form for <%=  @beer %> object here -->
-peepeepoopoo
-<%= simple_form_for @beer do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :address_line2 %>
-  <%= f.input :preferences %>
-  <%= f.button :submit %>
+<% if @user.beer %>
+  <p> you already registered your information. Made a mistake? Contact the administrator for your beer exchange.</p>
+  <p> This is what you told us: </p>
+  <p> Name: <%= @user.beer.name %></p>
+  <p> Address: <%= @user.beer.address %></p>
+  <p> Address line 2: <%= @user.beer.address_line2 %></p>
+  <p> Preferences: <%= @user.beer.preferences %> </p>
+<% else %>
+  <%= simple_form_for @beer do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :address_line2 %>
+    <%= f.input :preferences %>
+    <%= f.button :submit %>
+  <% end %>
 <% end %>
