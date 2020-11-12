@@ -4,10 +4,13 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to the beer exchange friend</h1>
-    <%= @recipient.name %>
-    <%= @recipient.address %>
-    <%= @recipient.address_line2 %>
-    <%= @recipient.preferences %>
+    <h1>We have found your secret beer santa recipient</h1>
+    <p>name: <%= @recipient.beer.name %></p>
+    <p>address: <%= @recipient.beer.address %></p>
+    <p>address line 2: <%= @recipient.beer.address_line2 %></p>
+    <p>preferences: <%= @recipient.beer.preferences %></p>
+    <p> Remember that christmas is a hectic time for postal services worldwide and doubly so for international shipping.
+    It's wise to get your precious package out a month before christmas so your friend can enjoy the gift as he or she
+    celebrates the birth of our saviour Jesus Christ. t. Jebbs and Saltenfisk</p>
   </body>
 </html>

@@ -13,32 +13,34 @@ class PagesController < ApplicationController
     if @user.admin
       friends = matching_algorithm
       friends.each do |sender, receiver|
-        UserMailer.welcome_email(sender, receiver).deliver_now
+        UserMailer.beer_email(sender, receiver).deliver_now
       end
+      redirect_to '/dashboard'
     end
   end
 
   private
+  # TO DO
+  # 1 every user can only be picked as a potential recipient once
+  # 2 every recipient must be picked once
+  # 3 Noone can be matched with themselves
 
   def matching_algorithm
-    users = User.all
-    potential_friends = User.all
-    last = users[-1]
+    users = User.all.shuffle
     friends = {}
-    users.each do |user|
-      num = rand(0 .. potential_friends.length)
-      while potential_friends[num] == user && user != last
-        num = rand(0 .. potential_friends.length)
+    i = 0
+    l = users.length
+    while i < l
+      if i + 1 != l
+        friends[users[i]] = users[i + 1]
+      else
+        friends[users[i]] = users[0]
       end
-      friends[user] = potential_friends[num]
-      potential_friends.slice!(num)
-      if user == last && potential_friends[num] == user
-        matching_algorithm
-      end
-      friends
+      i += 1
     end
     friends
   end
+
 
   # This algorithm only works for even numbers of users. Will set up two and two people with each other.
   # TODO add a solution where it can handle an odd number.
@@ -50,7 +52,7 @@ class PagesController < ApplicationController
       num = rand(1 .. users.length)
       friends[users[0]] = users[num]
       friends[users[num]] = users[0]
-      users.slice!(0, num)
+      users.slice(0, num)
       i++
       friends
     end
