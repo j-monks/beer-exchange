@@ -5,11 +5,11 @@ class BeersController < ApplicationController
   end
 
   def show
-    @beer = Beer.find(params[:id])
+    @beer = current_user.beer
   end
 
   def update
-    @beer = Beer.find(params[:id])
+    @beer = current_user.beer
     @beer.update!(beer_params)
     redirect_to @beer
   end
