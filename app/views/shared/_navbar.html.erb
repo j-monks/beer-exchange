@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "/#", class: "navbar-brand" do %>
     <%= image_tag "https://cdn1.iconfinder.com/data/icons/food-drink-flat/128/beer-512.png" %>
-    
+
     <% end %>
     <p class="navbar-message">Beer Exchange 2020</p>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,11 +15,16 @@
         <li class="nav-item active">
           <%= link_to "Home", "/#", class: "nav-link" %>
         </li>
-        <li class="nav-item">
+<!--         <li class="nav-item">
           <%= link_to "Messages", "#", class: "nav-link" %>
-        </li>
+        </li> -->
+        <!-- If the user has not registered direct them to do so, else let them review their submission -->
         <li class="nav-item">
-          <%= link_to "Get Started", "/beers/new", class: "nav-link" %>
+          <% if !current_user.beer %>
+            <%= link_to "Register information", "/beers/new", class: "nav-link" %>
+          <% else %>
+            <%= link_to "Your information", beer_path(current_user.beer), class: "nav-link" %>
+          <% end %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://www.dovercourt.org/wp-content/uploads/2019/11/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
