@@ -22,12 +22,12 @@ class InstancesController < ApplicationController
     @instance = Instance.new(instance_params)
     @user = current_user
     @instance.user = current_user
-    # if @instance.save
-    #   UserMailer.welcome_email(@user).deliver_now
-    #   redirect_to '/'
-    # else
-    #   render :new
-    # end
+    if @instance.save
+      # UserMailer.welcome_email(@user).deliver_now
+      redirect_to '/'
+    else
+      render :new
+    end
   end
 
   private
