@@ -58,5 +58,4 @@ class PagesController < ApplicationController
     end
     friends
   end
-
 end
