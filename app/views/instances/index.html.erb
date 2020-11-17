@@ -1,9 +1,9 @@
 This is where a list of the instances that are available will be presented,
 thinking drop-down menu. Possibly also a search bar.
-There will also be an option to create a new instance.
-
+<br>
 <% @instances.each do |instance|%>
-  <%= instance.name %>
-  <%= link_to instance_path(instance) %>
+  <%= link_to instance.name, instance_path(instance) %>
 <% end %>
 
+<br>
+<%= link_to "create instance", new_instance_path, class: "btn-primary" %>
