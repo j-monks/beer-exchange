@@ -1,10 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #3D315B;
+  color: white;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  color: white;
 }
 
 .navbar-lewagon .navbar-brand img {
@@ -14,4 +16,50 @@
 .navbar-message {
   margin-top: 14px;
   margin-right: auto;
+  color: white;
 }
+
+.nav-link-login {
+  margin: 10px 20px 10px 0;
+  padding: 10px;
+  display: block;
+  color: white;
+}
+
+.nav-link-get-started {
+    margin: 15px 150px 0 0;
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    font-weight: 700;
+    font-size: 14px;
+    display: block;
+    line-height: 1;
+}
+
+.nav-link-get-started:hover {
+  background-color: rgba(255,255,255,0.3) !important;
+  border-color: currentColor !important;
+  text-decoration: none;
+  color: white;
+}
+
+#beer-logo {
+  padding-left: 135px;
+  width: auto;
+  height: 50px;
+  background-position: 50% center;
+  background-size: contain;
+}
+
+.nav-link-login:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+ }
+
+
+
+ 
