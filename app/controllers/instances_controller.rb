@@ -5,6 +5,7 @@ class InstancesController < ApplicationController
 
   def show
     @instance = Instance.find(params[:id])
+    @beer = Beer.where("instance_id = #{@instance.id} AND user_id = #{current_user.id}").first
   end
 
   def update

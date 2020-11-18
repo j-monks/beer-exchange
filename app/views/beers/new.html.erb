@@ -1,25 +1,10 @@
 <!-- TODO, add a form for <%=  @beer %> object here -->
 <img class="beer" src="https://images.unsplash.com/photo-1525034687081-c702010cb70d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="">
 
-<% if @user.beer %>
-  <div class="homepage-warning">
-    <div class="step-box-div">
-      <div class="step-box">
-        <p> you already registered your information. Made a mistake? Contact the administrator for your beer exchange.</p>
-        <p> This is what you told us: </p>
-      </div>
-      <div class="step-box">
-        <p> Name: <%= @user.beer.name %></p>
-        <p> Address: <%= @user.beer.address %></p>
-        <p> Address line 2: <%= @user.beer.address_line2 %></p>
-        <p> Preferences: <%= @user.beer.preferences %> </p>
-      </div>
-    </div>
-  </div>
-<% else %>
+
   <div class="main-container">
     <div class="contact-form">
-      <%= simple_form_for @beer do |f| %>
+      <%= simple_form_for [@instance, @beer] do |f| %>
         <%= f.input :name %>
         <%= f.input :address %>
         <%= f.input :address_line2 %>
@@ -30,4 +15,3 @@
       <% end %>
     </div>
   </div>
-<% end %>
