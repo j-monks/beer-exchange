@@ -1,9 +1,13 @@
 This is where a list of the instances that are available will be presented,
 thinking drop-down menu. Possibly also a search bar.
 <br>
+
+<select name="instances" id="" onchange="location = this.value;">
 <% @instances.each do |instance|%>
-  <%= link_to instance.name, instance_path(instance) %>
+    <option value="<%= instance_path(instance)%>"><%= instance.name %></option>
 <% end %>
+</select>
+
 
 <br>
 <%= link_to "create instance", new_instance_path, class: "btn-primary" %>

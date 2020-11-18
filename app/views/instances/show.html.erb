@@ -1,8 +1,8 @@
-<%= @instance.name %>
+<h2><%= @instance.name %></h2>
 
-<p> TODO: This page needs to link to creating a new beer or editing it.
-For the owner of the instance there should be a link to deploy it, send out the mails</p>
+<!-- directs the user to create information if not yet made for the instance, else edit their information -->
 <% if @beer %>
-  <%= @beer.name %>
+  <%= link_to "edit your information", instance_beer_path(@instance, @beer) %>
+<% else %>
+  <%= link_to "Register your information", new_instance_beer_path(@instance) %>
 <% end %>
-<%= link_to "Register your information", new_instance_beer_path(@instance) %>
