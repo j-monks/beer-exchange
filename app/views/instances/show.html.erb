@@ -2,3 +2,7 @@
 
 <p> TODO: This page needs to link to creating a new beer or editing it.
 For the owner of the instance there should be a link to deploy it, send out the mails</p>
+<% if @beer %>
+  <%= @beer.name %>
+<% end %>
+<%= link_to "Register your information", new_instance_beer_path(@instance) %>

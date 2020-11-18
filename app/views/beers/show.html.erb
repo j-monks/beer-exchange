@@ -9,7 +9,7 @@
   </div>
   <div class="main-container">
     <div class="contact-form">
-      <%= simple_form_for @beer do |f| %>
+      <%= simple_form_for [@instance, @beer] do |f| %>
         <%= f.input :name %>
         <%= f.input :address %>
         <%= f.input :address_line2 %>
