@@ -1,8 +1,16 @@
 <h2><%= @instance.name %></h2>
 
+<% if @instance.user = current_user %>
+  <%= link_to "Manage your beer exchange and send emails", dashboard_path, class: "btn-primary btn-lg" %>
+<% end %>
+
 <!-- directs the user to create information if not yet made for the instance, else edit their information -->
 <% if @beer %>
-  <%= link_to "edit your information", instance_beer_path(@instance, @beer) %>
+  <%= link_to "edit your information", instance_beer_path(@instance, @beer), class: "btn-primary btn-lg" %>
 <% else %>
-  <%= link_to "Register your information", new_instance_beer_path(@instance) %>
+  <%= link_to "Register your information", new_instance_beer_path(@instance), class: "btn-primary btn-lg" %>
+<% end %>
+
+<% if @instance.user == current_user %>
+  <%= link_to "Send the e-mails", instance_mailer_path(@instance), :class  => "btn btn-primary" %>
 <% end %>

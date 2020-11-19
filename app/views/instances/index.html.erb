@@ -2,7 +2,8 @@ This is where a list of the instances that are available will be presented,
 thinking drop-down menu. Possibly also a search bar.
 <br>
 
-<select name="instances" id="" onchange="location = this.value;">
+<select name="instances" class="form-control form-control-lg" onchange="location = this.value;">
+  <option value="#">Select your beer exchange group</option>
 <% @instances.each do |instance|%>
     <option value="<%= instance_path(instance)%>"><%= instance.name %></option>
 <% end %>
@@ -10,4 +11,4 @@ thinking drop-down menu. Possibly also a search bar.
 
 
 <br>
-<%= link_to "create instance", new_instance_path, class: "btn-primary" %>
+<%= link_to "Create a new beer exchange group", new_instance_path, class: "btn-primary btn-lg" %>

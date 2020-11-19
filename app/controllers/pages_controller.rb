@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_action :find_instance, only: [ :mailer ]
   skip_before_action :authenticate_user!, only: [ :home ]
 
   def home
@@ -10,12 +11,13 @@ class PagesController < ApplicationController
 
   def mailer
     @user = current_user
-    if @user.admin
-      friends = matching_algorithm
+    # ensure that only the owner of the instance can deploy mails
+    if @user == @instance.user
+      friends = matching_algorithm(@instance)
       friends.each do |sender, receiver|
         UserMailer.beer_email(sender, receiver).deliver_now
       end
-      redirect_to '/dashboard'
+      redirect_to '/'
     end
   end
 
@@ -25,9 +27,11 @@ class PagesController < ApplicationController
   # 2 every recipient must be picked once
   # 3 Noone can be matched with themselves
 
-  def matching_algorithm
-    users = User.all.shuffle
+  def matching_algorithm(instance)
+    users = []
+    instance.beers.map { |beer| users << beer }
     friends = {}
+    users.shuffle!
     i = 0
     l = users.length
     while i < l
@@ -58,4 +62,9 @@ class PagesController < ApplicationController
     end
     friends
   end
+
+  def find_instance
+    @instance = Instance.find(params[:instance_id])
+  end
+
 end
