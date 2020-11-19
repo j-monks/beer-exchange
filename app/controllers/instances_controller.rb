@@ -3,13 +3,24 @@ class InstancesController < ApplicationController
     @instances = Instance.all
   end
 
+  #   def mailer
+  #   @user = current_user
+  #   if @user.admin
+  #     friends = matching_algorithm
+  #     friends.each do |sender, receiver|
+  #       UserMailer.beer_email(sender, receiver).deliver_now
+  #     end
+  #     redirect_to '/dashboard'
+  #   end
+  # end
+
   def show
     @instance = Instance.find(params[:id])
     @beer = Beer.where("instance_id = #{@instance.id} AND user_id = #{current_user.id}").first
   end
 
   def update
-    @instance = current_user.instance
+    @instance = Instance.find(params[:id])
     @instance.update!(instance_params)
     redirect_to @instance
   end
@@ -24,7 +35,7 @@ class InstancesController < ApplicationController
     @user = current_user
     @instance.user = current_user
     if @instance.save
-      # UserMailer.welcome_email(@user).deliver_now
+      UserMailer.welcome_email(@user).deliver_now
       redirect_to '/'
     else
       render :new

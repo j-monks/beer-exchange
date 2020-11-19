@@ -7,8 +7,8 @@ class UserMailer < ApplicationMailer
   end
 
   def beer_email(sender, recipient)
-    @sender = sender
-    @recipient = recipient
-    mail(to: @sender.email, subject: 'Information for the beer exchange')
+    @sender_beer = sender
+    @recipient_beer = recipient
+    mail(to: @sender_beer.user.email, subject: 'Information for the beer exchange')
   end
 end
