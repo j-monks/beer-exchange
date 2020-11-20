@@ -3,6 +3,10 @@
   src: url("../../fonts/FredokaOne-Regular.ttf");
 }
 
+body {
+  text-align: center;
+}
+
 .homepage {
     font-family: 'Fredoka One';
     color: white;
@@ -20,6 +24,8 @@
     margin-top: 25px;
     font-size: 29px;
 } 
+
+
 
 
 .links {
@@ -167,4 +173,42 @@ background-color: rgba(255,255,255,0.3) !important;
 border-color: currentColor !important;
 text-decoration: none;
 color: white;
+}
+
+.container-fluid{padding: 7% 15%;}
+
+/* sections  */
+.colored-section{background: #ff4c68;color: #fff;}
+.white-section{background-color: #776e8c;}
+
+/* Features section */
+#features {position: relative;z-index: 1;}
+.feature-box{padding: 5%;}
+.feature-text{font-size: 1.5rem;}
+
+.icon{color: #3D315B;margin-bottom: 1rem;}
+.icon:hover{color: #3D315B;}
+
+.circle-icon {
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100px;
+  vertical-align: middle;
+}
+
+.tick-box {
+  color: #fff;
+}
+
+.tick-circle-icon {
+  background: #3D315B;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 100px;
+  vertical-align: middle;
 }
