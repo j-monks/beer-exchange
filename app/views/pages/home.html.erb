@@ -2,7 +2,11 @@
   <div class="top-container-content">
     <h1>Exchange beers around the world</h1>
     <p>Made by friends for friends</p>
-    <%= link_to "Start Your Beer Exchange", new_user_registration_path, class: "homepage-get-started" %>
+    <% if current_user %>
+      <%= link_to "Start Your Beer Exchange", instances_path, class: "homepage-get-started" %>
+    <% else %>
+      <%= link_to "Start Your Beer Exchange", new_user_registration_path, class: "homepage-get-started" %>
+    <% end %>
    </div>
   </div>
 
@@ -37,5 +41,5 @@
 
     </div>
     </div>
-    
+
   </section>

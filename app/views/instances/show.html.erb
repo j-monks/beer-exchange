@@ -1,6 +1,6 @@
 <h2><%= @instance.name %></h2>
 
-<% if @instance.user = current_user %>
+<% if @instance.user == current_user %>
   <%= link_to "Manage your beer exchange and send emails", dashboard_path, class: "btn-primary btn-lg" %>
 <% end %>
 
