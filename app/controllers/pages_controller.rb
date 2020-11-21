@@ -46,7 +46,9 @@ class PagesController < ApplicationController
   end
 
 
-  # This algorithm only works for even numbers of users. Will set up two and two people with each other.
+  # This algorithm only works for even numbers of users. it's been kept in in
+  # case we want to add an option of different ways of distributing partners down the line.
+  # Will set up two and two people with each other.
   # TODO add a solution where it can handle an odd number.
   def pairing_algorithm
     users = User.all
