@@ -46,12 +46,18 @@
   color: white;
 }
 
+// added some responsiveness to the logo. Will now expand at 800 px width and beyond
 #beer-logo {
-  padding-left: 135px;
+  padding-left: 0px;
   width: auto;
-  height: 50px;
+  height: 38px;
   background-position: 50% center;
   background-size: contain;
+
+  @media (min-width: 800px) {
+    padding-left: 135px;
+    height: 50px;
+  }
 }
 
 .nav-link-login:hover {
@@ -62,4 +68,3 @@
 
 
 
- 
