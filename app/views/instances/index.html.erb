@@ -1,14 +1,24 @@
-This is where a list of the instances that are available will be presented,
-thinking drop-down menu. Possibly also a search bar.
-<br>
+<!-- This is where a list of the instances that are available will be presented,
+thinking drop-down menu. Possibly also a search bar. -->
 
-<select name="instances" class="form-control form-control-lg" onchange="location = this.value;">
-  <option value="#">Select your beer exchange group</option>
-<% @instances.each do |instance|%>
-    <option value="<%= instance_path(instance)%>"><%= instance.name %></option>
-<% end %>
-</select>
+<div class="container-instance-index">
+  <div class="instance-index-div col-lg-5">
+    <p>
+      Are you joining an existing exchange group? Look below to find your friends
+      or ask the creator for a link.
+    </p>
+    <select name="instances" class="form-control form-control-lg" onchange="location = this.value;">
+      <option value="#">Select your beer exchange group</option>
+    <% @instances.each do |instance|%>
+        <option value="<%= instance_path(instance)%>"><%= instance.name %></option>
+    <% end %>
+    </select>
+  </div>
 
-
-<br>
-<%= link_to "Create a new beer exchange group", new_instance_path, class: "btn-primary btn-lg" %>
+  <div class="instance-index-div col-lg-5">
+    <p>
+      Would you like to create your own exchange? Click below to get started!
+    </p>
+    <%= link_to "Create a new beer exchange group", new_instance_path, class: "homepage-get-started" %>
+  </div>
+</div>
