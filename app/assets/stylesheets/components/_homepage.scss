@@ -63,12 +63,20 @@ body {
     background-image: url("https://images.unsplash.com/photo-1436076863939-06870fe779c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
   }
 
-  p {
+  .p-normal {
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.5em;
     color: #fff;
     text-shadow: 3px 3px 5px #000;
+    margin-bottom: 2em;
+  }
+
+  .p-works {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: black;
     margin-bottom: 2em;
   }
 
@@ -180,6 +188,33 @@ body {
   }
 }
 
+.works-get-started {
+  margin: 0px;
+  background-color: #3D315B;
+  color: white;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  font-weight: 700;
+  //  height: 60px;
+  line-height: 60px;
+  padding: 1px;
+  margin: 2px;
+  font-size: 1.9rem;
+  border-radius: 30px;
+  display: inline-block;
+
+  @media (min-width: 800px) {
+    padding: 0 40px;
+  }
+}
+
+.works-get-started:hover {
+  background-color: #776e8c !important;
+  border-color: #776e8c !important;
+  text-decoration: none;
+  color: white;
+  }
+
 .homepage-get-started:hover {
 background-color: rgba(255,255,255,0.3) !important;
 border-color: currentColor !important;
@@ -190,17 +225,20 @@ color: white;
 .container-fluid{padding: 7% 15%;}
 
 /* sections  */
-.colored-section{background: #ff4c68;color: #fff;}
-.white-section{background-color: #776e8c;}
+.purple-section{background-color: #776e8c;}
+.white-section {
+  background-color: #fff;
+}
 
 /* Features section */
 #features {position: relative;z-index: 1;}
-.feature-box{padding: 5%;}
+.feature-box{padding: 5%;
+  flex-direction: row;}
 .feature-text{font-size: 1.5rem;}
 
 .icon{color: #3D315B;margin-bottom: 1rem;}
-.icon:hover{color: #3D315B;}
 
+.icon-works{color: #fff;margin-bottom: 1rem;}
 .circle-icon {
   background: #fff;
   width: 100px;
@@ -208,6 +246,15 @@ color: white;
   border-radius: 50%;
   text-align: center;
   line-height: 100px;
+  vertical-align: middle;
+}
+.circle-icon-works {
+  background: #3D315B;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 73px;
   vertical-align: middle;
 }
 
@@ -224,3 +271,66 @@ color: white;
   line-height: 100px;
   vertical-align: middle;
 }
+
+
+
+
+.secpaddingTB60 {
+  padding-top:60px;
+  padding-bottom:60px;
+}
+
+.section-title {
+  font-weight:400;
+  letter-spacing:.5px;
+  text-transform:none;
+  color:#000;
+}
+.section-titlepara {
+  font-weight:400;
+  text-transform:none;
+  color:#636363;
+}
+
+.border {
+  background: #e2e2e2;
+  height: 1px;
+  width: 265px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+
+.i-how-it-works {
+  font-size : 36px;
+  padding-right: 10px;
+  color: #aece61;
+}
+.icon-box {
+  position: relative;
+  margin-top: 20px;
+  padding: 0 0 0 80px;
+  margin-left: 30%;
+}
+.icon-left {
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 0;
+  left: 0;
+}
+
+
+// changes how many lines the icon text in the how it works seciton are on
+.col-md-4 {
+  @media (min-width: 768px) {
+    flex: 0 0 33.3333333333%;
+    max-width: 77%; 
+    }
+  }
+
+  .works-text {
+    margin-left: 40px;
+  }

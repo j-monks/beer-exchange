@@ -1,7 +1,7 @@
 <div class="top-container">
   <div class="top-container-content">
     <h1>Exchange beers around the world</h1>
-    <p>Made by friends for friends</p>
+    <p class="p-normal">Made by friends for friends</p>
     <% if current_user %>
       <%= link_to "Start Your Beer Exchange", instances_path, class: "homepage-get-started" %>
     <% else %>
@@ -21,7 +21,7 @@
     <p class="step-box">Please excuse the rough appearance of the website at the present stage. It was coded by a duo of very recent bootcamp graduates in a few days next to full-time work. Rest assured we did none of the encryption ourselves. Good luck and merry christmas!</p>
   </div>
 </div> -->
-<section id="features" class="white-section">
+<section id="features" class="purple-section">
     <div class="container-fluid">
       <div class="row">
       <div class=" feature-box col-lg-4">
@@ -42,4 +42,66 @@
     </div>
     </div>
 
+  </section>
+
+
+<section id="how-it-works" class="white-section">
+   <div class="icons-left-3boxes-section secpaddingTB60 ">
+    <div class="container">
+    	<div class="row">
+    	    <div class="col-md-12 text-center"> 
+    	        <h2 class="section-title ">How it works</h2>
+    	        <h4 class="section-titlepara">The Beer Exchanges Secret Santa allows you to set up your Gift Exchange quickly and easily.</h4>
+    	 </div>
+    	 <div class="border text-center"></div>
+    	   
+    
+	<div class="column">
+            	<div class="col-md-4">
+                    <div class="icon-box">
+                        <div class="icon-left">
+                          <i class="fas fa-beer fa-2x circle-icon-works tick-box"></i>
+                        </div>
+                        <p class="p-works">Sign up and create a Beer Exchange group</p>
+                    </div>
+                </div>
+            	<div class="col-md-4">
+                    <div class="icon-box">
+                        <div class="icon-left">
+                            <i class="fas fa-beer fa-2x circle-icon-works tick-box"></i>
+                        </div>
+                        <p class="p-works">Invite your friends or family via sign up link or email or join directly from the groups page.</p>
+                    </div>
+                </div>
+            	<div class="col-md-4">
+                    <div class="icon-box">
+                        <div class="icon-left">
+                           <i class="fas fa-beer fa-2x circle-icon-works tick-box"></i>
+                        </div>
+                        <p class="p-works">Participants set their information and beer preferences.</p>
+                    </div>
+                </div>
+            	<div class="col-md-4">
+                    <div class="icon-box">
+                        <div class="icon-left">
+                           <i class="fas fa-beer fa-2x circle-icon-works tick-box"></i>
+                        </div>
+                        <p class="p-works">The groups creater will have particpants paired up along with their information via email once everyone is ready.</p>
+                    </div>
+                </div>
+            	<div class="col-md-4">
+                    <div class="icon-box">
+                        <div class="icon-left">
+                           <i class="fas fa-beer fa-2x circle-icon-works tick-box"></i>
+                        </div>
+                        <p class="p-works">Send beer to your partner and enjoy your beer!</p>
+                    </div>
+                </div>
+                  <div class="works-button-container">
+                    <%= link_to "Start Your Beer Exchange", new_user_registration_path, class: "works-get-started" %>
+                  </div> 
+            </div>
+</div>
+</div>
+</div>
   </section>
