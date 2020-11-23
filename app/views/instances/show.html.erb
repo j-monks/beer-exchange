@@ -5,7 +5,7 @@
     <!-- directs the user to create information if not yet made for the instance, else edit their information -->
     <% if @beer %>
       You have registered your preferences and shipping information for this exchange, and they are as follows: </p>
-      <div class="show-content">
+      <div class="show-content" id="information">
         <p> name: <%= @beer.name %> </p>
         <p>address: <%= @beer.address %> </p>
         <% if @beer.address_line2.present? %>
@@ -33,7 +33,7 @@
     <p> If you are sure you are ready to send out the emails to everyone in your exchange group click here.
       Please make sure everyone is ready before clicking
     </p>
-      <%= link_to "Send the e-mails", instance_mailer_path(@instance), :class  => "homepage-get-started" %>
+      <%= link_to "Send the e-mails", instance_mailer_path(@instance), :class  => "homepage-get-started",  :data => {:confirm => 'Are you sure? Clicking this will send out mails to everyone who has registered for the exchange with the preferences and mailing information for one random person.'} %>
     <% end %>
   </div>
 </div>
