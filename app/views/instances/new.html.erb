@@ -2,7 +2,7 @@
 Password functionality will come later. -->
 <div class="container-instance-index">
   <%= simple_form_for @instance do |f| %>
-    <%= f.input :name %>
+    <%= f.input :name, label_html: { class: "p-normal" } %>
     <%= f.button :submit, class: 'submit-btn', value: "Create your new exchange group" %>
   <% end %>
 </div>
