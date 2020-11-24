@@ -311,7 +311,10 @@ color: white;
   position: relative;
   margin-top: 20px;
   padding: 0 0 0 80px;
-  margin-left: 30%;
+  margin-left: 0%;
+  @media (min-width: 800px) {
+    margin-left: 30%;
+    }
 }
 .icon-left {
   display: block;

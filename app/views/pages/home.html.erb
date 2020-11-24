@@ -1,111 +1,98 @@
 <div class="top-container">
-  <div class="top-container-content">
-    <h1>Exchange beers around the world</h1>
-    <p class="p-normal">Made by friends for friends</p>
-    <% if current_user %>
+   <div class="top-container-content">
+      <h1>Exchange beers around the world</h1>
+      <p class="p-normal">Made by friends for friends</p>
+      <% if current_user %>
       <%= link_to "Start Your Beer Exchange", instances_path, class: "homepage-get-started" %>
-    <% else %>
+      <% else %>
       <%= link_to "Start Your Beer Exchange", new_user_registration_path, class: "homepage-get-started" %>
-    <% end %>
+      <% end %>
    </div>
-  </div>
-
+</div>
 <!-- <div class="homepage">
-  <img class="beer" src="https://images.unsplash.com/photo-1525034687081-c702010cb70d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="">
-  <p>Beer Exchange</p>
-  <p>Heres the quick run down</p>
-  <%= link_to "instances", instances_path %>
-  <div class="step-box-div">
-    <p class="step-box">Click the "Get Started" link in the top right on the nav bar on your screen. You will be prompted to enter the shipping information. It is highly recommended that you accurately fill out this form. Experience has shown that people using fake addresses to protect their identity don't get their beer.</p>
-    <p class="step-box">At some date (yet to be decided) we will give everyone a person to whom they will be tasked to send beer. You are this person's secret santa, so make it a merry christmas and don't give them a sixpack of pabst blue ribbon.</p>
-    <p class="step-box">Please excuse the rough appearance of the website at the present stage. It was coded by a duo of very recent bootcamp graduates in a few days next to full-time work. Rest assured we did none of the encryption ourselves. Good luck and merry christmas!</p>
-  </div>
-</div> -->
+   <img class="beer" src="https://images.unsplash.com/photo-1525034687081-c702010cb70d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="">
+   <p>Beer Exchange</p>
+   <p>Heres the quick run down</p>
+   <%= link_to "instances", instances_path %>
+   <div class="step-box-div">
+     <p class="step-box">Click the "Get Started" link in the top right on the nav bar on your screen. You will be prompted to enter the shipping information. It is highly recommended that you accurately fill out this form. Experience has shown that people using fake addresses to protect their identity don't get their beer.</p>
+     <p class="step-box">At some date (yet to be decided) we will give everyone a person to whom they will be tasked to send beer. You are this person's secret santa, so make it a merry christmas and don't give them a sixpack of pabst blue ribbon.</p>
+     <p class="step-box">Please excuse the rough appearance of the website at the present stage. It was coded by a duo of very recent bootcamp graduates in a few days next to full-time work. Rest assured we did none of the encryption ourselves. Good luck and merry christmas!</p>
+   </div>
+   </div> -->
 <section id="features" class="purple-section">
-    <div class="container-fluid">
+   <div class="container-fluid">
       <div class="row">
-      <div class=" feature-box col-lg-4">
-        <i class="icon fas fa-check fa-4x circle-icon"></i>
-        <h3 class="feature-text">Fast, free and easy to use</h3>
+         <div class=" feature-box col-lg-4">
+            <i class="icon fas fa-check fa-4x circle-icon"></i>
+            <h3 class="feature-text">Fast, free and easy to use</h3>
+         </div>
+         <div class=" feature-box col-lg-4">
+            <i class="icon fas fa-users fa-4x circle-icon"></i>
+            <h3 class="feature-text">Be a part of many exchanges at any one time</h3>
+         </div>
+         <div class=" feature-box col-lg-4">
+            <i class="icon fas fa-gift fa-4x circle-icon"></i>
+            <h3 class="feature-text">Don't like beer? send whatever you like instead</h3>
+         </div>
       </div>
-
-      <div class=" feature-box col-lg-4">
-        <i class="icon fas fa-users fa-4x circle-icon"></i>
-        <h3 class="feature-text">Be a part of many exchanges at any one time</h3>
-      </div>
-
-      <div class=" feature-box col-lg-4">
-        <i class="icon fas fa-gift fa-4x circle-icon"></i>
-        <h3 class="feature-text">Don't like beer? send whatever you like instead</h3>
-      </div>
-
-    </div>
-    </div>
-
-  </section>
-
-
+   </div>
+</section>
 <section id="how-it-works" class="white-section">
    <div class="icons-left-3boxes-section secpaddingTB60 ">
-    <div class="container">
-    	<div class="row">
-    	    <div class="col-md-12 text-center">
-    	        <h2 class="section-title ">How it works</h2>
-    	        <h4 class="section-titlepara">The Beer Exchanges Secret Santa allows you to set up your Gift Exchange quickly and easily.</h4>
-    	 </div>
-    	 <div class="border text-center"></div>
-
-
-	<div class="column">
-            	<div class="col-md-4">
-                    <div class="icon-box">
-                        <div class="icon-left">
-                          <i class="fas fa-beer fa-2x circle-icon-works tick-box"></i>
-                        </div>
-                        <p class="p-works">Sign up and create a Beer Exchange group</p>
-                    </div>
-                </div>
-            	<div class="col-md-4">
-                    <div class="icon-box">
-                        <div class="icon-left">
-                            <i class="fas fa-beer fa-2x circle-icon-works tick-box"></i>
-                        </div>
-                        <p class="p-works">Invite your friends or family via sign up link or email or join directly from the groups page.</p>
-                    </div>
-                </div>
-            	<div class="col-md-4">
-                    <div class="icon-box">
-                        <div class="icon-left">
-                           <i class="fas fa-beer fa-2x circle-icon-works tick-box"></i>
-                        </div>
-                        <p class="p-works">Participants set their information and beer preferences.</p>
-                    </div>
-                </div>
-            	<div class="col-md-4">
-                    <div class="icon-box">
-                        <div class="icon-left">
-                           <i class="fas fa-beer fa-2x circle-icon-works tick-box"></i>
-                        </div>
-                        <p class="p-works">The groups creater will have particpants paired up along with their information via email once everyone is ready.</p>
-                    </div>
-                </div>
-            	<div class="col-md-4">
-                    <div class="icon-box">
-                        <div class="icon-left">
-                           <i class="fas fa-beer fa-2x circle-icon-works tick-box"></i>
-                        </div>
-                        <p class="p-works">Send beer to your partner and enjoy your beer!</p>
-                    </div>
-                </div>
-                  <div class="works-button-container">
-                    <% if current_user %>
-                      <%= link_to "Start Your Beer Exchange", instances_path, class: "works-get-started" %>
-                    <% else %>
-                      <%= link_to "Start Your Beer Exchange", new_user_registration_path, class: "works-get-started" %>
-                    <% end %>
-                  </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 text-center">
+               <h2 class="section-title ">How it works</h2>
+               <h4 class="section-titlepara">The Beer Exchanges Secret Santa allows you to set up your Gift Exchange quickly and easily.</h4>
             </div>
-</div>
-</div>
-</div>
-  </section>
+            <div class="border text-center"></div>
+            <div class="column">
+               <div class="col-md-4">
+                  <div class="icon-box">
+                     <div class="icon-left">
+                        <i class="fas fa-beer fa-2x circle-icon-works tick-box"></i>
+                     </div>
+                     <p class="p-works">Sign up and create a Beer Exchange group</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="icon-box">
+                     <div class="icon-left">
+                        <i class="fas fa-beer fa-2x circle-icon-works tick-box"></i>
+                     </div>
+                     <p class="p-works">Invite your friends or family via sign up link or email or join directly from the groups page.</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="icon-box">
+                     <div class="icon-left">
+                        <i class="fas fa-beer fa-2x circle-icon-works tick-box"></i>
+                     </div>
+                     <p class="p-works">Participants set their information and beer preferences.</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="icon-box">
+                     <div class="icon-left">
+                        <i class="fas fa-beer fa-2x circle-icon-works tick-box"></i>
+                     </div>
+                     <p class="p-works">The groups creater will have particpants paired up along with their information via email once everyone is ready.</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="icon-box">
+                     <div class="icon-left">
+                        <i class="fas fa-beer fa-2x circle-icon-works tick-box"></i>
+                     </div>
+                     <p class="p-works">Send beer to your partner and enjoy your beer!</p>
+                  </div>
+               </div>
+               <div class="works-button-container">
+                  <%= link_to "Start Your Beer Exchange", new_user_registration_path, class: "works-get-started" %>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
