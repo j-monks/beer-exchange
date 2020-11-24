@@ -49,13 +49,13 @@
    <div class="icons-left-3boxes-section secpaddingTB60 ">
     <div class="container">
     	<div class="row">
-    	    <div class="col-md-12 text-center"> 
+    	    <div class="col-md-12 text-center">
     	        <h2 class="section-title ">How it works</h2>
     	        <h4 class="section-titlepara">The Beer Exchanges Secret Santa allows you to set up your Gift Exchange quickly and easily.</h4>
     	 </div>
     	 <div class="border text-center"></div>
-    	   
-    
+
+
 	<div class="column">
             	<div class="col-md-4">
                     <div class="icon-box">
@@ -98,8 +98,12 @@
                     </div>
                 </div>
                   <div class="works-button-container">
-                    <%= link_to "Start Your Beer Exchange", new_user_registration_path, class: "works-get-started" %>
-                  </div> 
+                    <% if current_user %>
+                      <%= link_to "Start Your Beer Exchange", instances_path, class: "works-get-started" %>
+                    <% else %>
+                      <%= link_to "Start Your Beer Exchange", new_user_registration_path, class: "works-get-started" %>
+                    <% end %>
+                  </div>
             </div>
 </div>
 </div>
