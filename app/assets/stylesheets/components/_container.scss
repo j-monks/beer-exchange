@@ -1,6 +1,6 @@
 .container-default-background {
   width: 100vw;
-  height: calc(100vh - 76px);
+  min-height: calc(100vh - 76px);
   background-color: #766E8C;
   padding: 25px;
   display: flex;
