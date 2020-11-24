@@ -1,21 +1,21 @@
-<div class="container-instance-index">
+<div class="container-default-background">
   <div class="show-card">
-    <p>You are currently looking at the <%= @instance.name %> exchange group.
+    <p class="p-normal">You are currently looking at the <%= @instance.name %> exchange group.
 
     <!-- directs the user to create information if not yet made for the instance, else edit their information -->
     <% if @beer %>
       You have registered your preferences and shipping information for this exchange, and they are as follows: </p>
-      <div class="show-content">
-        <p> name: <%= @beer.name %> </p>
-        <p>address: <%= @beer.address %> </p>
+      <div class="show-content" id="information">
+        <p class="p-normal"> name: <%= @beer.name %> </p>
+        <p class="p-normal">address: <%= @beer.address %> </p>
         <% if @beer.address_line2.present? %>
           <p>address line 2: <%= @beer.address_line2 %> </p>
         <% end %>
-        <p> phone number: <%= @beer.phone %> </p>
-        <p> preferences: <%= @beer.preferences %> </p>
-        <p> email: <%= @beer.email %> </p>
+        <p class="p-normal"> phone number: <%= @beer.phone %> </p>
+        <p class="p-normal"> preferences: <%= @beer.preferences %> </p>
+        <p class="p-normal"> email: <%= @beer.email %> </p>
       </div>
-      <p>
+      <p class="p-normal">
         Would you like to make changes? <%= link_to "Click here", instance_beer_path(@instance, @beer), class: "" %>
         to edit your information.
       </p>
@@ -28,12 +28,17 @@
     </div>
   <% end %>
 
-  <div class="send-mail">
-    <% if @instance.user == current_user %>
-    <p> If you are sure you are ready to send out the emails to everyone in your exchange group click here.
-      Please make sure everyone is ready before clicking
-    </p>
-      <%= link_to "Send the e-mails", instance_mailer_path(@instance), :class  => "homepage-get-started" %>
-    <% end %>
-  </div>
+  <% if @instance.user == current_user %>
+    <div class="send-mail">
+      <p class="p-normal">
+        As of this moment
+        <%= @instance.beers.count %>
+        users have registered their information to participate in this exchange.
+      </p>
+      <p class="p-normal"> If you are sure you are ready to send out the emails to everyone in your exchange group click here.
+        Please make sure everyone is ready before clicking
+      </p>
+      <%= link_to "Send the e-mails", instance_mailer_path(@instance), :class  => "homepage-get-started",  :data => {:confirm => 'Are you sure? Clicking this will send out mails to everyone who has registered for the exchange with the preferences and mailing information for one random person.'} %>
+    </div>
+  <% end %>
 </div>
