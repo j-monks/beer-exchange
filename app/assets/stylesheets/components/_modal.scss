@@ -1,0 +1,33 @@
+// styling for the confirm popup window
+
+.modal-header {
+  background-color: #3D305A;
+
+  h5 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;
+  }
+}
+
+.modal-body {
+  background-color: #766E8C;
+  p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;
+    margin-bottom: 2em;
+  }
+}
+
+.modal-footer {
+  background-color: #766E8C;
+  .cancel {
+    background-color: #3D305A;
+    color: #fff;
+  }
+}
