@@ -1,22 +1,23 @@
-<img class="beer" src="https://images.unsplash.com/photo-1525034687081-c702010cb70d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="">
-
-<div class="homepage-warning">
-  <div class="step-box-div">
-    <div class="step-box">
-      <p> you already registered your information. Made a mistake? Use the form below to update it.</p>
+<!-- <img class="beer" src="https://images.unsplash.com/photo-1525034687081-c702010cb70d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt=""> -->
+<div class="container-default-background">
+  <div class="homepage-warning">
+    <div class="step-box-div">
+      <div class="show-content">
+        <p class="p-normal"> you already registered your information. Made a mistake? Use the form below to update it.</p>
+      </div>
     </div>
   </div>
-</div>
-<div class="main-container">
-  <div class="contact-form">
-    <%= simple_form_for [@instance, @beer] do |f| %>
-      <%= f.input :name %>
-      <%= f.input :address %>
-      <%= f.input :address_line2 %>
-      <%= f.input :phone %>
-      <%= f.input :email %>
-      <%= f.input :preferences %>
-      <%= f.button :submit, class: 'submit-btn' %></button>
-    <% end %>
+  <div class="main-container">
+    <div class="contact-form">
+      <%= simple_form_for [@instance, @beer] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :address_line2 %>
+        <%= f.input :phone %>
+        <%= f.input :email %>
+        <%= f.input :preferences %>
+        <%= f.button :submit, class: 'submit-btn' %></button>
+      <% end %>
+    </div>
   </div>
 </div>

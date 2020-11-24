@@ -1,15 +1,10 @@
-.container-instance-index {
+.container-default-background {
   width: 100vw;
   min-height: calc(100vh - 76px);
   background-color: #766E8C;
   padding: 25px;
   display: flex;
   flex-wrap: wrap;
-  content-align: space-evenly;
+  content-align: center;
   justify-content: space-evenly;
-}
-
-.instance-index-div {
-  max-width: 700px;
-  padding: 8px;
 }
