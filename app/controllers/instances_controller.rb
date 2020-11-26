@@ -36,7 +36,7 @@ class InstancesController < ApplicationController
     @instance.user = current_user
     if @instance.save
       UserMailer.welcome_email(@user).deliver_now
-      redirect_to '/'
+      redirect_to @instance
     else
       render :new
     end

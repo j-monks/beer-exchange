@@ -31,7 +31,7 @@ class BeersController < ApplicationController
     @beer.instance = @instance
     if @beer.save!
       UserMailer.welcome_email(@user).deliver_now
-      redirect_to '/'
+      redirect_to @instance
     else
       render :new
     end
