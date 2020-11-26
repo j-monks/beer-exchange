@@ -19,12 +19,20 @@
   color: white;
 }
 
+a:link{
+  text-decoration: none!important;
+}
 
 .nav-link-white {
   margin: 2px 20px 2px 0;
   padding: 10px;
   display: block;
   color: white;
+  cursor: pointer;
+}
+
+.nav-link-white:hover {
+  color: grey;
 }
 
 .nav-link-get-started {

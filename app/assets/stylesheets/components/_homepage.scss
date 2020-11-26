@@ -221,8 +221,8 @@ border-color: currentColor !important;
 text-decoration: none;
 color: white;
 }
-
 .container-fluid{padding: 7% 15%;}
+.container-fluid-footer{padding: 2% 15%;}
 
 /* sections  */
 .purple-section{background-color: #776e8c;}
@@ -341,4 +341,16 @@ color: white;
 
   .nav-styling2 { 
     margin-right: 135px;
+  }
+
+  .social-icon{margin: 20px 10px;
+    color: #3D315B}
+
+  .social-icon:hover {
+    color: #50456b;
+  }
+
+  .footer-p {
+    font-size: large;
+    color: #3D315B;
   }
